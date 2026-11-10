@@ -148,7 +148,7 @@ async function createChannels(guild, roleIds, report) {
           name: channelConfig.name,
           type: channelConfig.type,
           parent: category.id,
-          permissionOverwrites: channelOverwrites(guild, roleIds, channelConfig.access),
+          permissionOverwrites: channelOverwrites(guild, roleIds, categoryConfig.access),
           reason: 'Novex server rebuild'
         };
         if (channelConfig.type === ChannelType.GuildForum) {
